@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Crythonix</title>
+  <link rel="stylesheet" href="accessoriescheckout.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">Crythonix</a>
+      <ul class="nav-links">
+        <li><a href="order.html">Order PC</a></li>
+        <li><a href="caseplate.html">Cases/Platelights</a></li>
+        <li><a href="accessories.html">Gaming Accessories</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Checkout Section -->
+  <section class="checkout">
+    <h2 class="section-title">Checkout</h2>
+    <div class="cart-items">
+      <!-- Cart items will be dynamically inserted here -->
+    </div>
+    <div class="total-section">
+      <p>Subtotal: <span class="subtotal">$0.00</span></p>
+      <p>GST (0.8%): <span class="gst">$0.00</span></p>
+      <p>Total: <span class="total">$0.00</span></p>
+    </div>
+    <form class="payment-form">
+      <h3>Payment Details</h3>
+      <input type="text" placeholder="Cardholder Name" required>
+      <input type="text" placeholder="Card Number" required>
+      <input type="text" placeholder="Expiry Date" required>
+      <input type="text" placeholder="CVV" required>
+      <button type="submit" class="place-order">Place Order</button>
+    </form>
+  </section>
+  
+  <div class="cart-items">
+  <!-- Cart items will be dynamically inserted here -->
+</div>
+
+  <script src="cart.js"></script>
+  <script src="accessoriescheckout.js"></script>
+</body>
+</html>

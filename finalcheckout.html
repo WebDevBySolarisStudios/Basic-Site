@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Crythonix</title>
+  <link rel="stylesheet" href="caseplate.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">Crythonix</a>
+      <ul class="nav-links">
+        <li><a href="order.html">Order PC</a></li>
+        <li><a href="caseplate.html">Cases/Platelights</a></li>
+        <li><a href="accessories.html">Gaming Accessories</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Checkout Section -->
+  <section class="finalcheckout-section">
+    <h2 class="section-title">Checkout</h2>
+    <div class="finalcheckout-container">
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <ul class="cart-items"></ul>
+        <div class="totals">
+          <p>Subtotal: <span id="subtotal">$0.00</span></p>
+          <p>GST (0.8%): <span id="gst">$0.00</span></p>
+          <p>Total: <span id="total">$0.00</span></p>
+        </div>
+      </div>
+      <div class="payment-details">
+        <h3>Payment Details</h3>
+        <form id="payment-form">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+
+          <label for="expiry-date">Expiry Date</label>
+          <input type="text" id="expiry-date" placeholder="MM/YY" required>
+
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="123" required>
+
+          <button type="submit" class="checkout-btn">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="finalcheckout.js"></script>
+</body>
+</html>

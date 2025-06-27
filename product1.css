@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(10, 10, 10, 0.9);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* Product Details Section */
+.product-details {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-image-container {
+  flex: 1;
+}
+
+.product-detail-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.product-info {
+  flex: 2;
+}
+
+.product-title {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.product-specs {
+  margin-top: 1.5rem;
+}
+
+.product-specs h2 {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.product-specs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-specs li {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.product-rating {
+  margin-top: 1.5rem;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.5rem;
+}
+
+.rating-text {
+  font-size: 1rem;
+  color: #ccc;
+  margin-left: 0.5rem;
+}
+
+.add-to-cart {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #ffd700;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.add-to-cart:hover {
+  background-color: #e6b800;
+}
+
+/* Cart Display */
+.cart-display {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  z-index: 1000;
+}
+
+.cart-icon {
+  font-size: 2rem;
+  color: #ffd700;
+}
+
+.cart-count {
+  font-size: 1.5rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Hoverable Cart Popup */
+.cart-popup {
+  display: none;
+  position: absolute;
+  bottom: 80px; /* Position above the cart icon */
+  left: 0;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  z-index: 1001; /* Ensure it appears above other elements */
+}
+
+.cart-display:hover .cart-popup {
+  display: block; /* Show the popup on hover */
+}
+
+.cart-popup-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.cart-popup-item:last-child {
+  border-bottom: none;
+}
+
+.cart-popup-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.cart-popup-item button {
+  background-color: #ff0000;
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.cart-popup-item button:hover {
+  background-color: #cc0000;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-controls button {
+  background-color: #ffd700;
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.quantity-controls button:hover {
+  background-color: #e6b800;
+}
+
+/* Add to Cart and Return Buttons */
+.add-to-cart,
+.return-button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #ffd700; /* Gold background */
+  color: #0a0a0a; /* Black text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none; /* Remove underline for <a> tag */
+  text-align: center;
+  font-family: inherit; /* Ensures the font matches */
+  display: inline-block; /* Ensures consistent sizing */
+  margin-right: 1rem; /* Adds spacing between buttons */
+}
+
+.add-to-cart:hover,
+.return-button:hover {
+  background-color: #e6b800; /* Darker gold on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}

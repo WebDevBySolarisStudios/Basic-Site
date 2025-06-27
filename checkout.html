@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Crythonix</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">Crythonix</a>
+      <ul class="nav-links">
+        <li><a href="order.html">Order PC</a></li>
+        <li><a href="index.html#cases">Cases/Platelights</a></li>
+        <li><a href="index.html#accessories">Gaming Accessories</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Checkout Section -->
+  <section class="checkout-section">
+    <h2 class="section-title">Checkout</h2>
+    <div class="checkout-content">
+      <!-- Selected Tier Details -->
+      <div class="selected-tier">
+        <h3 id="selected-tier-title"></h3>
+        <div class="tier-details-box">
+          <h4>Specifications</h4>
+          <pre id="selected-tier-details"></pre>
+          <h4>Performance</h4>
+          <pre id="selected-tier-performance"></pre>
+        </div>
+      </div>
+
+      <!-- Payment and Summary Section -->
+      <div class="payment-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-box">
+          <p id="selected-tier-price"></p>
+          <p>GST + 0.8%</p>
+          <p>Free Shipping</p>
+        </div>
+
+        <!-- Payment Form -->
+        <form class="payment-form">
+          <h3>Payment Information</h3>
+          <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+          </div>
+          <div class="form-group">
+            <label for="expiry-date">Expiry Date</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" required>
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Cardholder Name</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+          </div>
+          <!-- Cloudflare Turnstile Script -->
+          <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+          <button type="submit" class="btn btn-primary">Pay Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
